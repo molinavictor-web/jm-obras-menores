@@ -5,3 +5,16 @@
 .heroOverlay{position:relative;z-index:2}
 @media(max-width:900px){.hero{background-image:linear-gradient(90deg,rgba(7,11,16,.84),rgba(7,11,16,.56)),url("Tu%20Hogar%2C%20Nuestras%20Manos.png");background-position:68% center;background-size:cover}}
 @media(max-width:560px){.hero{min-height:650px;background-image:linear-gradient(rgba(7,11,16,.64),rgba(7,11,16,.76)),url("Tu%20Hogar%2C%20Nuestras%20Manos.png");background-position:66% center;background-size:auto 100%;background-repeat:no-repeat}.heroOverlay{min-height:650px}}
+
+/* HERO V2 — clean photo + real HTML content, no baked-in duplicate artwork */
+.hero{min-height:660px!important;position:relative!important;overflow:hidden!important;background:#080d12!important;color:#fff;isolation:isolate}
+.heroMedia{position:absolute;inset:0;z-index:-3;background:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=88") 66% 50%/cover no-repeat;transform:scale(1.01)}
+.heroShade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,9,13,.96) 0%,rgba(5,9,13,.88) 30%,rgba(5,9,13,.56) 52%,rgba(5,9,13,.16) 74%,rgba(5,9,13,.05) 100%)}
+.hero:before,.hero:after{display:none!important}.heroOverlay{min-height:660px!important;display:flex;align-items:center;position:relative;z-index:1}
+.heroCopy{max-width:660px;padding:44px 0 34px}.heroBadge{display:inline-flex;padding:8px 11px;border:1px solid rgba(255,151,0,.42);border-radius:999px;background:rgba(255,151,0,.10);color:#ffd08a;font-size:11px;font-weight:800;letter-spacing:1.2px}
+.hero .tag{margin:18px 0 0}.hero h1{font-size:clamp(54px,6.3vw,88px);line-height:.92;margin:12px 0 20px;letter-spacing:-3.5px;text-transform:uppercase;text-shadow:0 8px 28px rgba(0,0,0,.28)}
+.hero h1 em{font-style:normal;color:#ff9700}.heroLead{font-size:18px!important;line-height:1.62!important;color:#eef1f3!important;max-width:610px!important;margin:0!important}
+.hero .outline{border:1px solid rgba(255,255,255,.62);color:#fff;background:rgba(8,13,18,.18);backdrop-filter:blur(5px)}
+.heroTrust{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:26px;color:#dbe2e7;font-size:12px;font-weight:700}.heroTrust span{white-space:nowrap}
+@media(max-width:900px){.hero,.heroOverlay{min-height:640px!important}.heroMedia{background-position:68% center}.heroShade{background:linear-gradient(90deg,rgba(5,9,13,.94),rgba(5,9,13,.76) 58%,rgba(5,9,13,.40))}}
+@media(max-width:560px){.hero,.heroOverlay{min-height:650px!important}.heroMedia{background-position:70% center}.heroShade{background:linear-gradient(180deg,rgba(5,9,13,.56),rgba(5,9,13,.82) 48%,rgba(5,9,13,.96))}.heroOverlay{align-items:flex-end}.heroCopy{padding:95px 0 44px}.hero h1{font-size:46px;letter-spacing:-2px}.heroLead{font-size:16px!important}.heroTrust{gap:8px 14px}}
